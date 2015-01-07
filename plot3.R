@@ -74,7 +74,10 @@ PowerConsump[,2:8] <- apply(PowerConsump[,2:8], MARGIN = 2, FUN = as.numeric)
 
 ##------------------------------------------------------------------------------
 ## plot3
-png(file = "plot3.png", width = 480, height = 480)
+## In accordance with instruction 
+## on https://class.coursera.org/exdata-010/human_grading/view/courses/973504/assessments/3/submissions
+## I construct the plot with a width of 480 pixels and a height of 480 pixels:
+png(file = "plot3.png", width = 480, height = 480, bg = "transparent")
 with(PowerConsump, {
         plot(Time, Sub_metering_1, 
              type = "l", col = "black",

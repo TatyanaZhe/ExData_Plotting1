@@ -74,21 +74,27 @@ PowerConsump[,2:8] <- apply(PowerConsump[,2:8], MARGIN = 2, FUN = as.numeric)
 
 ##------------------------------------------------------------------------------
 ## plot4
-png(file = "plot4.png", width = 480, height = 480)
+## In accordance with instruction 
+## on https://class.coursera.org/exdata-010/human_grading/view/courses/973504/assessments/3/submissions
+## I construct the plot with a width of 480 pixels and a height of 480 pixels:
+png(file = "plot4.png", width = 480, height = 480, bg = "transparent")
 par(mfrow = c(2,2))
 with(PowerConsump, {
+        # plot 4.1.1
         plot(Time, Global_active_power,  
              col = "black",
              type = "l",
              xlab = "", ylab = "Global Active Power (kilowatts)"
              )
         
+        # plot 4.1.2
         plot(Time, Voltage,  
              col = "black",
              type = "l",
              xlab = "datetime", ylab = "Voltage"
              )
         
+        # plot 4.2.1
         {plot(Time, Sub_metering_1, 
                 type = "l", col = "black",
                 xlab = "", ylab = "Energy sub metering")
@@ -106,6 +112,7 @@ with(PowerConsump, {
                )
         }
 
+        # plot 4.2.2
         plot(Time, Global_reactive_power,  
                 col = "black",
                 type = "l",
