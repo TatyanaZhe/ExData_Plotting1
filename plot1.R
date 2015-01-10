@@ -5,13 +5,12 @@
 ##------------------------------------------------------------------------------
 ##------------------------------------------------------------------------------
 
-## Preparation for plotting 
+## Pre-proceeding data 
 
-library(plyr)
 library(dplyr)
 
-## If necessary txt-file don't exist in working directory 
-## foolowing fragment of code 
+## If txt-file "household_power_consumption.txt" with needed data set 
+## does not exist in working directory following fragment of code
 ## will download (if it is necessary) the zip-file into working_directory 
 ## and unzip its
 if( !file.exists("household_power_consumption.txt") ) {

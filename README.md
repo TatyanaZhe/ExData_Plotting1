@@ -1,14 +1,23 @@
-## Introduction
+# Exploratory data analysis course 
+## Project Course 1
 
+### Overall goal 
+Our overall goal here is simply to examine how household energy usage varies over a 2-day period in February, 2007. 
+
+We will only be using data from the dates <b>2007-02-01</b> and <b>2007-02-02</b>.  
+
+### Data describing
 This assignment uses data from
 the <a href="http://archive.ics.uci.edu/ml/">UC Irvine Machine
 Learning Repository</a>, a popular repository for machine learning
 datasets. In particular, we will be using the "Individual household
-electric power consumption Data Set" which I have made available on
+electric power consumption Data Set" which is available on
 the course web site:
 
 
 * <b>Dataset</b>: <a href="https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip">Electric power consumption</a> [20Mb]
+
+Data set was downloaded by me "2015-01-07"
 
 * <b>Description</b>: Measurements of electric power consumption in
 one household with a one-minute sampling rate over a period of almost
@@ -33,10 +42,37 @@ web site</a>:
 <li><b>Sub_metering_3</b>: energy sub-metering No. 3 (in watt-hour of active energy). It corresponds to an electric water-heater and an air-conditioner.</li>
 </ol>
 
-## Loading the data
+
+## Results
+### Repo contains
+* <b>4 PNG-files with plots</b> looking like as sample-figures (PNG-format, width=480, height=480 pixels, transparent background)
+
+. `plot1.png` - Histogram of Global Active Power (kilowatts)
+
+. `plot2.png` - Global Active Power (kilowatts) vs Time
+
+. `plot3.png` - Sub-metering No. 1, 2, and 3 (in watt-hour of active energy) vs Time
+
+. `plot4.png` - (1) Global Active Power (kilowatts), (2) Voltage (Volts), (3) Sub-metering No. 1, 2, and 3 (watt-hours), (4) Global Reactive Power (kilowatts) vs Time
+
+
+* <b>4 R-files</b> constructing the corresponding plots (i.e. code in `plot1.R` constructs the `plot1.png` plot) using <b>only the base plotting system</b>. 
+
+Programs automaticaly load packages "dplyr" and (if it is necessary) - "downloader".
+
+If txt-file "household_power_consumption.txt" with needed data set doesn't exist in working directory programs will unzip needed zip-file or download the zip-file into working directory from Course site and than unzip its.
+
+! Note: the programs read dataset with 2,075,259 rows and 9 columns. The full dataset will require in memory rough 79.5 Mb. 
+Function 'memory.size' reports the current or maximum memory allocation of the 'malloc' function used in this version of R. 
+<b>If you are not sure that your computer has enough memory don't run these scripts!</b>
 
 
 
+
+
+
+## Project Task
+### Loading the data
 
 
 When loading the dataset into R, please consider the following:
@@ -58,7 +94,7 @@ functions.
 * Note that in this dataset missing values are coded as `?`.
 
 
-## Making Plots
+### Making Plots
 
 Our overall goal here is simply to examine how household energy usage
 varies over a 2-day period in February, 2007. Your task is to
@@ -92,23 +128,23 @@ date. There should be four PNG files and four R code files.
 The four plots that you will need to construct are shown below. 
 
 
-### Plot 1
+#### Plot 1
 
 
 ![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2.png) 
 
 
-### Plot 2
+#### Plot 2
 
 ![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3.png) 
 
 
-### Plot 3
+#### Plot 3
 
 ![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4.png) 
 
 
-### Plot 4
+#### Plot 4
 
 ![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5.png) 
 
